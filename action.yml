@@ -1,6 +1,9 @@
 name: 'setup-ducible'
 description: 'Places ducible.exe in the PATH'
 author: 't-richards'
+branding:
+  icon: 'copy'
+  color: 'gray-dark'
 runs:
   using: 'node12'
   main: 'dist/index.js'
