@@ -3,7 +3,7 @@
   "name": "setup-ducible",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write **/*.ts",
