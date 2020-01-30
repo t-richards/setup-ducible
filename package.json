@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "setup-ducible",
-  "version": "1.0.0",
+  "version": "1.2.2",
   "license": "MIT",
   "main": "lib/main.js",
   "scripts": {
