@@ -1,9 +1,6 @@
-name: 'downlad-binary'
-description: 'Downloads a .exe file and places it in the PATH'
+name: 'setup-ducible'
+description: 'Places ducible.exe in the PATH'
 author: 't-richards'
-inputs:
-  url:
-    description: 'The URL of a .exe file to download'
 runs:
   using: 'node12'
   main: 'dist/index.js'
