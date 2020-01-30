@@ -1270,6 +1270,10 @@ const tc = __importStar(__webpack_require__(533));
 const ARCH = "x64";
 const DUCIBLE = "ducible";
 const DUCIBLE_VERSION = "1.2.2";
+function addExeToPath(cacheDir) {
+    const ducibleExe = path.join(cacheDir, "ducible.exe");
+    core.addPath(ducibleExe);
+}
 function ducibleUrl(version = DUCIBLE_VERSION, arch = ARCH) {
     return `https://github.com/jasonwhite/ducible/releases/download/v${version}/ducible-windows-${arch}-Release.zip`;
 }
@@ -1277,22 +1281,17 @@ exports.ducibleUrl = ducibleUrl;
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            // Attempt to find cached version of the tool
+            // Attempt to find cached version of the tool; add it to the path
             let cacheDir = tc.find(DUCIBLE, DUCIBLE_VERSION);
-            // Add cached tool to path
             if (cacheDir) {
-                const ducibleExe = path.join(cacheDir, "ducible.exe");
-                core.addPath(ducibleExe);
-                return;
+                return addExeToPath(cacheDir);
             }
-            // Download fresh release and unzip it
+            // Download fresh release; unzip it
             const downloadPath = yield tc.downloadTool(ducibleUrl());
             const zipFolder = yield tc.extractZip(downloadPath);
-            // Cache unzipped folder
+            // Cache unzipped folder; add newly cached tool to the path
             cacheDir = yield tc.cacheDir(zipFolder, DUCIBLE, DUCIBLE_VERSION);
-            // Add tool to the path
-            const ducibleExe = path.join(cacheDir, "ducible.exe");
-            core.addPath(ducibleExe);
+            return addExeToPath(cacheDir);
         }
         catch (error) {
             core.setFailed(error.message);
