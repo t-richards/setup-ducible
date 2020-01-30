@@ -7,11 +7,6 @@ const ARCH = "x64";
 const DUCIBLE = "ducible";
 const DUCIBLE_VERSION = "1.2.2";
 
-function addExeToPath(cacheDir: string): void {
-  const ducibleExe = path.join(cacheDir, "ducible.exe");
-  core.addPath(ducibleExe);
-}
-
 export function ducibleUrl(
   version: string = DUCIBLE_VERSION,
   arch: string = ARCH
@@ -24,7 +19,7 @@ async function run(): Promise<void> {
     // Attempt to find cached version of the tool; add it to the path
     let cacheDir = tc.find(DUCIBLE, DUCIBLE_VERSION);
     if (cacheDir) {
-      return addExeToPath(cacheDir);
+      return core.addPath(cacheDir);
     }
 
     // Download fresh release; unzip it
@@ -33,7 +28,7 @@ async function run(): Promise<void> {
 
     // Cache unzipped folder; add newly cached tool to the path
     cacheDir = await tc.cacheDir(zipFolder, DUCIBLE, DUCIBLE_VERSION);
-    return addExeToPath(cacheDir);
+    return core.addPath(cacheDir);
   } catch (error) {
     core.setFailed(error.message);
   }
