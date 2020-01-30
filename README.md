@@ -32,6 +32,6 @@ jobs:
 
 ## License
 
-This software is available as open source under the terms of the [MIT License][license]
+This software is available as open source under the terms of the [MIT License][license].
 
 [license]: ./LICENSE
