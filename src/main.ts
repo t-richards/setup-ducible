@@ -1,13 +1,13 @@
 import * as core from "@actions/core";
 import * as tc from "@actions/tool-cache";
 
-const ARCH = "x64";
+const ARCH_64 = "x64";
 const DUCIBLE = "ducible";
 const DUCIBLE_VERSION = "1.2.2";
 
 export function ducibleUrl(
   version: string = DUCIBLE_VERSION,
-  arch: string = ARCH
+  arch: string = ARCH_64
 ): string {
   return `https://github.com/jasonwhite/ducible/releases/download/v${version}/ducible-windows-${arch}-Release.zip`;
 }

@@ -1,4 +1,4 @@
-TODO(tom) Status Badge
+TODO(tom): Status Badge
 
 # setup-ducible
 
