@@ -17,12 +17,12 @@ export function ducibleUrl(
 async function run(): Promise<void> {
   try {
     // Attempt to find cached version of the tool
-    let cacheDir = await tc.find(DUCIBLE, DUCIBLE_VERSION);
+    let cacheDir = tc.find(DUCIBLE, DUCIBLE_VERSION);
 
     // Add cached tool to path
     if (cacheDir) {
       const ducibleExe = path.join(cacheDir, "ducible.exe");
-      await core.addPath(ducibleExe);
+      core.addPath(ducibleExe);
 
       return;
     }
@@ -36,7 +36,7 @@ async function run(): Promise<void> {
 
     // Add tool to the path
     const ducibleExe = path.join(cacheDir, "ducible.exe");
-    await core.addPath(ducibleExe);
+    core.addPath(ducibleExe);
   } catch (error) {
     core.setFailed(error.message);
   }

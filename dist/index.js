@@ -1278,11 +1278,11 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             // Attempt to find cached version of the tool
-            let cacheDir = yield tc.find(DUCIBLE, DUCIBLE_VERSION);
+            let cacheDir = tc.find(DUCIBLE, DUCIBLE_VERSION);
             // Add cached tool to path
             if (cacheDir) {
                 const ducibleExe = path.join(cacheDir, "ducible.exe");
-                yield core.addPath(ducibleExe);
+                core.addPath(ducibleExe);
                 return;
             }
             // Download fresh release and unzip it
@@ -1292,7 +1292,7 @@ function run() {
             cacheDir = yield tc.cacheDir(zipFolder, DUCIBLE, DUCIBLE_VERSION);
             // Add tool to the path
             const ducibleExe = path.join(cacheDir, "ducible.exe");
-            yield core.addPath(ducibleExe);
+            core.addPath(ducibleExe);
         }
         catch (error) {
             core.setFailed(error.message);
