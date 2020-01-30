@@ -1,10 +1,9 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'downlad-binary'
+description: 'Downloads a .exe file and places it in the PATH'
+author: 't-richards'
 inputs:
-  myInput:              # change this
-    description: 'input description here'
-    default: 'default value if applicable'
+  url:
+    description: 'The URL of a .exe file to download'
 runs:
   using: 'node12'
   main: 'dist/index.js'
