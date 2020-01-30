@@ -6,16 +6,16 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
+    "dist": "ncc build",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
-    "pack": "ncc build",
     "test": "jest",
-    "all": "yarn build && yarn format && yarn lint && yarn pack && yarn test"
+    "all": "yarn build && yarn format && yarn lint && yarn dist && yarn test"
   },
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/tool-cache": "^1.3.1"
+    "@actions/core": "^1.2",
+    "@actions/tool-cache": "^1.3"
   },
   "devDependencies": {
     "@types/jest": "^25.0",

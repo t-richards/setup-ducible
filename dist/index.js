@@ -1278,27 +1278,20 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             // Attempt to find cached version of the tool
-            const cacheDir = yield tc.find(DUCIBLE, DUCIBLE_VERSION);
+            let cacheDir = yield tc.find(DUCIBLE, DUCIBLE_VERSION);
             // Add cached tool to path
             if (cacheDir) {
-                core.debug(`Found ${DUCIBLE} v${DUCIBLE_VERSION} in cache ${cacheDir}`);
                 const ducibleExe = path.join(cacheDir, "ducible.exe");
                 yield core.addPath(ducibleExe);
                 return;
             }
-            // Download fresh release zip
-            const url = ducibleUrl();
-            core.debug(`Downloading ${url} ...`);
-            const downloadPath = yield tc.downloadTool(url);
-            core.debug(downloadPath);
-            // Unzip the downloaded file
+            // Download fresh release and unzip it
+            const downloadPath = yield tc.downloadTool(ducibleUrl());
             const zipFolder = yield tc.extractZip(downloadPath);
-            core.debug(zipFolder);
-            // Place tool in the cache
-            const newCacheDir = yield tc.cacheDir(zipFolder, DUCIBLE, DUCIBLE_VERSION);
-            core.debug(newCacheDir);
+            // Cache unzipped folder
+            cacheDir = yield tc.cacheDir(zipFolder, DUCIBLE, DUCIBLE_VERSION);
             // Add tool to the path
-            const ducibleExe = path.join(newCacheDir, "ducible.exe");
+            const ducibleExe = path.join(cacheDir, "ducible.exe");
             yield core.addPath(ducibleExe);
         }
         catch (error) {
