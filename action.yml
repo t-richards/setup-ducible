@@ -7,3 +7,12 @@ branding:
 runs:
   using: 'node12'
   main: 'dist/index.js'
+inputs:
+  version:
+    description: 'Version of ducible to download'
+    required: false
+    default: '1.2.2'
+  arch:
+    description: 'Architecture of ducible to download (x32 or x64)'
+    required: false
+    default: 'x64'
