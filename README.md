@@ -30,6 +30,26 @@ jobs:
       run: ducible my_app.exe
 ```
 
+## Inputs
+
+### `version`: string (optional)
+
+The version of ducible to download. e.g. `'1.2.2'`. Defaults to `1.2.2`.
+
+### `arch`: string (optional)
+
+The architecture of the tool to download. e.g. `'x32'` or `'x64'`. Defaults to `x64`.
+
+## Input example
+
+```yaml
+- name: Setup ducible
+  uses: t-richards/setup-ducible@v1
+  with:
+    version: '1.2.2'
+    arch: 'x64'
+```
+
 ## License
 
 This software is available as open source under the terms of the [MIT License][license].
