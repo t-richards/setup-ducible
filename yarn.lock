@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@actions/core@^1.2.0":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.2.2.tgz#3c4848d50378f9e3bcb67bcf97813382ec7369ee"
-  integrity sha512-IbCx7oefq+Gi6FWbSs2Fnw8VkEI6Y4gvjrYprY3RV//ksq/KPMlClOerJ4jRosyal6zkUIc8R9fS/cpRMlGClg==
+"@actions/core@^1.2", "@actions/core@^1.2.3":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.2.4.tgz#96179dbf9f8d951dd74b40a0dbd5c22555d186ab"
+  integrity sha512-YJCEq8BE3CdN8+7HPZ/4DxJjk/OkZV2FFIf+DlZTC/4iBlzYCD5yjRR6eiOS5llO11zbRltIRuKAjMKaWTE6cg==
 
 "@actions/exec@^1.0.0":
   version "1.0.3"
@@ -14,10 +14,10 @@
   dependencies:
     "@actions/io" "^1.0.1"
 
-"@actions/http-client@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@actions/http-client/-/http-client-1.0.3.tgz#b5239d3d8c72378bdcef4d26bb15fa2a01d537fd"
-  integrity sha512-wFwh1U4adB/Zsk4cc9kVqaBOHoknhp/pJQk+aWTocbAZWpIl4Zx/At83WFRLXvxB+5HVTWOACM6qjULMZfQSfw==
+"@actions/http-client@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@actions/http-client/-/http-client-1.0.8.tgz#8bd76e8eca89dc8bcf619aa128eba85f7a39af45"
+  integrity sha512-G4JjJ6f9Hb3Zvejj+ewLLKLf99ZC+9v+yCxoYf9vSyH+WkzPLB2LuUtRMGNkooMqdugGBFStIKXOuvH1W+EctA==
   dependencies:
     tunnel "0.0.6"
 
@@ -26,14 +26,14 @@
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.0.2.tgz#2f614b6e69ce14d191180451eb38e6576a6e6b27"
   integrity sha512-J8KuFqVPr3p6U8W93DOXlXW6zFvrQAJANdS+vw0YhusLIq+bszW8zmK2Fh1C2kDPX8FMvwIl1OUcFgvJoXLbAg==
 
-"@actions/tool-cache@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@actions/tool-cache/-/tool-cache-1.3.1.tgz#0db440cefaa7d797d28e2892065b04bfcc1b697f"
-  integrity sha512-sKoEJv0/c7WzjPEq2PO12Sc8QdEp58XIBHMm3c4lUn/iZWgLz9HBeCuFGpLQjDvXJNfLZ4g+WD+rMjgOmpH4Ag==
+"@actions/tool-cache@^1.3":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@actions/tool-cache/-/tool-cache-1.6.0.tgz#5b425db2d642df65dd0d6bcec0d84dcdbca3f80d"
+  integrity sha512-+fyEBImPD3m5I0o6DflCO0NHY180LPoX8Lo6y4Iez+V17kO8kfkH0VHxb8mUdmD6hn9dWA9Ch1JA20fXoIYUeQ==
   dependencies:
-    "@actions/core" "^1.2.0"
+    "@actions/core" "^1.2.3"
     "@actions/exec" "^1.0.0"
-    "@actions/http-client" "^1.0.3"
+    "@actions/http-client" "^1.0.8"
     "@actions/io" "^1.0.1"
     semver "^6.1.0"
     uuid "^3.3.2"
@@ -2539,9 +2539,9 @@ lodash.sortby@^4.7.0:
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
 lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 lolex@^5.0.0:
   version "5.1.2"
