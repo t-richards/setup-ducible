@@ -6,29 +6,29 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
-    "dist": "ncc build -m",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
+    "package": "ncc build -m",
     "test": "jest",
-    "all": "npm build && npm format && npm lint && npm dist && npm test"
+    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/tool-cache": "^1.3"
   },
   "devDependencies": {
-    "@types/jest": "^25.0",
+    "@types/jest": "^26.0",
     "@types/node": "^13.5",
-    "@typescript-eslint/eslint-plugin": "^2.18",
-    "@typescript-eslint/parser": "^2.18",
-    "@vercel/ncc": "^0.25.1",
-    "eslint": "^6.8",
-    "eslint-plugin-jest": "^23.6",
-    "jest": "^25.0",
-    "jest-circus": "^25.0",
+    "@typescript-eslint/eslint-plugin": "^4.16",
+    "@typescript-eslint/parser": "^4.16",
+    "@vercel/ncc": "^0.25",
+    "eslint": "^7.17",
+    "eslint-plugin-jest": "^24.1",
+    "jest": "^26.0",
+    "jest-circus": "^26.6",
     "prettier": "^1.19",
-    "ts-jest": "^25.0",
-    "typescript": "^3.6"
+    "ts-jest": "^26.4",
+    "typescript": "^4.1"
   }
 }
