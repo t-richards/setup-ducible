@@ -6,8 +6,9 @@ test("run built action with env/stdout protocol", () => {
   process.env["INPUT_VERSION"] = "1.2.2";
   process.env["INPUT_ARCH"] = "x64";
 
+  const nodePath = process.execPath;
   const inputPath = path.join(__dirname, "..", "lib", "main.js");
-  const options: cp.ExecSyncOptions = { env: process.env };
+  const options: cp.ExecFileSyncOptions = { env: process.env };
 
-  console.log(cp.execSync(`node ${inputPath}`, options).toString());
+  console.log(cp.execFileSync(nodePath, [inputPath], options).toString());
 });
