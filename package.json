@@ -11,10 +11,10 @@
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
     "test": "jest",
-    "all": "yarn build && yarn format && yarn lint && yarn dist && yarn test"
+    "all": "npm build && npm format && npm lint && npm dist && npm test"
   },
   "dependencies": {
-    "@actions/core": "^1.2",
+    "@actions/core": "^1.2.6",
     "@actions/tool-cache": "^1.3"
   },
   "devDependencies": {
@@ -22,7 +22,7 @@
     "@types/node": "^13.5",
     "@typescript-eslint/eslint-plugin": "^2.18",
     "@typescript-eslint/parser": "^2.18",
-    "@zeit/ncc": "^0.21",
+    "@vercel/ncc": "^0.25.1",
     "eslint": "^6.8",
     "eslint-plugin-jest": "^23.6",
     "jest": "^25.0",
