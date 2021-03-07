@@ -6,7 +6,7 @@ type DucibleArch = "Win32" | "x64";
 
 const ARCH_MAP: Record<NodeArch, DucibleArch> = {
   x32: "Win32",
-  x64: "x64"
+  x64: "x64",
 };
 const DUCIBLE = "ducible";
 

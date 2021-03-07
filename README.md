@@ -1,6 +1,6 @@
-TODO(tom): Status Badge
-
 # setup-ducible
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/t-richards/setup-ducible/build-test?style=flat-square)
 
 This action adds the [Ducible][ducible] command-line tool to your PATH.
 
@@ -9,7 +9,7 @@ This action adds the [Ducible][ducible] command-line tool to your PATH.
 ## Usage
 
 ```yaml
-name: "Reproducible build"
+name: build
 on: [push]
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup ducible
-      uses: t-richards/setup-ducible@v1
+      uses: t-richards/setup-ducible@master
 
     - name: Build my_app.exe
       run: <your build process here>
@@ -44,7 +44,7 @@ The architecture of the tool to download. e.g. `'x32'` or `'x64'`. Defaults to `
 
 ```yaml
 - name: Setup ducible
-  uses: t-richards/setup-ducible@v1
+  uses: t-richards/setup-ducible@master
   with:
     version: '1.2.2'
     arch: 'x64'
