@@ -1,6 +1,6 @@
 # setup-ducible
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/t-richards/setup-ducible/build-test?style=flat-square)
+[![Build Status](https://img.shields.io/github/workflow/status/t-richards/setup-ducible/build-test?style=flat-square)](https://github.com/t-richards/setup-ducible/actions)
 
 This action adds the [Ducible][ducible] command-line tool to your PATH.
 
