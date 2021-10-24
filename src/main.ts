@@ -41,7 +41,7 @@ async function run(): Promise<void> {
     const arch = core.getInput("arch") as NodeArch;
 
     await setupDucible(version, arch);
-  } catch (error) {
+  } catch (error: any) {
     core.setFailed(error.message);
   }
 }
